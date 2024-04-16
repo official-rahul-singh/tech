@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SiteName</title>
+        <!-- preload fonts -->
+        <link rel="preload" href="assets/fonts/inter-tight-v7-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/inter-tight-v7-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/inter-tight-v7-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+        <!-- css -->
+        <link rel="stylesheet" href="assets/css/layout.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- favicon -->
+        <link rel="icon" href="assets/img/fav icon.png">
+        <style>
+        /* inter-tight-regular - latin */
+        @font-face {  
+        font-display: swap; 
+        font-family: 'Inter Tight';
+        font-style: normal;
+        font-weight: 400;
+        src: url('assets/fonts/inter-tight-v7-latin-regular.woff2') format('woff2'); 
+        }
+        /* inter-tight-500italic - latin */
+        @font-face {
+        font-display: swap;
+        font-family: 'Inter Tight';
+        font-style: italic;
+        font-weight: 500;
+        src: url('assets/fonts/inter-tight-v7-latin-500italic.woff2') format('woff2'); 
+        }
+        /* inter-tight-600 - latin */
+        @font-face {
+        font-display: swap; 
+        font-family: 'Inter Tight';
+        font-style: normal;
+        font-weight: 600;
+        src: url('assets/fonts/inter-tight-v7-latin-600.woff2') format('woff2'); 
+        }
+        /* inter-tight-700 - latin */
+        @font-face {
+        font-display: swap; 
+        font-family: 'Inter Tight';
+        font-style: normal;
+        font-weight: 700;
+        src: url('assets/fonts/inter-tight-v7-latin-700.woff2') format('woff2'); 
+        }
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- Header  ================================= START -->
+    <header>
+        <div class="container flex-between">
+            <div class="site-logo">
+                <a href="#"><img src="assets/img/logo.svg" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown"><a href="#" class="active">Solutions</a>
+                        <ul>
+                            <li>
+                               <a href="#">How to</a>
+                            </li>
+                            <li>
+                               <a href="#">Reviews</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"> Submenu</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Top 10</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">JavaScript</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PHP MySQL</a>
+                                    </li>
+                                </ul>
+                            </li>
+                         </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Company</a>
+                        <ul>
+                            <li>
+                               <a href="#">How to</a>
+                            </li>
+                            <li>
+                               <a href="#">Reviews</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"> Submenu</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Top 10</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">JavaScript</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PHP MySQL</a>
+                                    </li>
+                                </ul>
+                            </li>
+                         </ul>
+                    </li>
+                    <li><a href="#">Case studies</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+                <div class="cancel-btn" onclick="toggleButtons()">
+                     <svg fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z">
+                        </path>
+                     </svg>
+                  </div>
+            </nav>
+        
+             <div class="right-header flex-gap">
+                <div class="contact-us">
+                    <a href="#" class="btn-txt">Client Support <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13.714" width="10" height="10" fill="none"><path d="M11.748 7.463c0.335 -0.335 0.335 -0.879 0 -1.213l-4.286 -4.286c-0.335 -0.335 -0.879 -0.335 -1.213 0s-0.335 0.879 0 1.213L9.075 6H0.857c-0.474 0 -0.857 0.383 -0.857 0.857s0.383 0.857 0.857 0.857h8.215L6.252 10.537c-0.335 0.335 -0.335 0.879 0 1.213s0.879 0.335 1.213 0l4.286 -4.286z"/></svg></a>
+                    <a href="#">1-800-356-8933</a>
+                </div>
+                <a href="#" class="btn-fill">Contact Us</a>
+                <div class="search-form">
+                    <div class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="search-input">
+                        <form action="" class="flex">
+                            <input type="search" name="" placeholder="what can we help you?" id="">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667M14 14l-2.9-2.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="toggle-slide-btn" onclick="toggleButtons()">
+                    <svg width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
+                       </path>
+                    </svg>
+                 </div>
+             </div>
+        </div>
+    </header>
+        <!-- Header  ======================-============ END -->
+
+
+        <!-- Main layout Sections ===================== START -->
+        <main>
+            <!-- Section 1 ================= START -->
+            <div class="container hero-header">
+      
+            
+            <div class="hero-content">
+                <div class="heading-title">
+                    We manage your IT, so you can manage your business.
+                </div>
+                <div class="sub-htitle">
+                    Take charge of your business continuity with innovative IT solutions
+                </div>
+                <div class="dual-button flex-gap">
+                    <a href="#" class="btn-fill">Schedule a Free Consultation</a>
+                    <a href="#" class="btn-light">Services</a>
+                </div>
+            </div>
+            
+   
+                    <div class="hero-img">
+                        <img src="assets/img/GettyImages-618762080-1.webp" class="img-fluid" alt="">
+                    </div>
+             
+         
+            </div>
+            <!-- Section 1 =========== END -->
+            <!-- Section 2 ================= START -->
+            <div class="container sec-space">
+                <div class="why-to-choose grid">
+                    <div class="review flex">
+                        <span>REVIEWED ON</span>
+                        <div class="flex">
+                            <img src="assets/img/clutch-logo.svg" alt="">
+                            <span><a href="#">31 REVIEWS</a></span>
+                        </div>
+                    </div>
+                    <div class="counter-box">
+                     <div class="flex">
+                        <span class="h4" id="counter1">0</span>
+                        <span class="h6">Years</span>
+                     </div>
+                        <div>
+                           Proven Track Record
+                        </div>
+                    </div>
+                    <div class="counter-box">
+                        <div class="flex">
+                            <span class="h4" id="counter2">0</span>
+                            <span class="h6">%</span>
+                         </div>
+                         <div>
+                            Customer Satisfaction
+                         </div>
+                    </div>
+                    <div class="counter-box">
+                        <div class="flex">
+                            <span class="h4" id="counter3">0</span>
+                            <span class="h6">Projects</span>
+                         </div>
+                         <div>
+                            We Have Completed
+                         </div>
+                    </div>
+                    <div class="counter-box">
+                        <div class="flex">
+                            <span class="h4" id="counter4">0</span>
+                            <span class="h6">Mins</span>
+                         </div>
+                         <div>
+                            Average Answer Time
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 2 =========== END -->
+            <div class="container sec-space">
+                <div class="call-to flex">
+                    <div class="h3">Simplifying IT<br>
+                        for a complex world.</div>
+                        <a href="#" class="btn-fill">Schedule a Free Consultation</a>
+                  </div>
+            </div>
+
+             <!-- Section 3 =========== START -->
+             <div class="container sec-space">
+              <div class="row">
+                <div class="col-lg-3">
+                    <div class="card-content">
+                        <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                        <div class="h5">Cost-effectiveness</div>
+                        <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-content">
+                        <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                        <div class="h5">Innovative Technology</div>
+                        <p>We stay up-to-date with the latest technology trends and offer innovative solutions that help you stay ahead of the competition.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-content">
+                        <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                        <div class="h5">Industry Expertise</div>
+                        <p>We specialize in serving specific industries, such as healthcare, finance, or manufacturing, and offer tailored solutions that meet your unique needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-content">
+                        <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                        <div class="h5">Scalability</div>
+                        <p>Our solutions are scalable and can grow with your business, ensuring that you get the most value out of your investment.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+             <!-- Section 3 =========== END -->
+
+              <!-- Section 4 =========== START -->
+           <div class="background-overlay sec-space">
+            <div class="container">
+                <div class="sep">
+                    <div class="sub-title">HOW WE DO</div>
+                    <div class="h1">Solutions</div>
+                </div>
+                <div class="row row-gap">
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h5">Cost-effectiveness</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h5">IT Consulting & Advisory</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h5">Cyber Security</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h5">Cyber Security</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h5">Cyber Security</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <div class="card-content">
+                                <img src="https://tecnologia.vamtam.com/wp-content/uploads/2023/03/Cost-effectiveness.svg" alt="">
+                                <a href="#" class="h5">Cyber Security</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more</a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn-fill">View All Solution</a>
+              </div>
+           </div>
+              <!-- Section 4 =========== END -->
+
+              <!-- Section 4 =========== START -->
+              <div class="container sec-space">
+                <div class="sep">
+                    <div class="sub-title">WHERE WE DO</div>
+                    <div class="h1">Success Stories</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="blog-card">
+                            <div class="card-content">
+                                <a href="#"><img src="https://ityug247.com/wp-content/uploads/2024/04/security-features-for-mobile-phones.webp" class="img-fluid" alt=""></a>
+                                <a href="#" class="title-h">Major Insurance Provider Saves $750k per Month With Big Data Migration</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog-card">
+                            <div class="card-content">
+                                <a href="#"><img src="https://ityug247.com/wp-content/uploads/2024/04/security-features-for-mobile-phones.webp" class="img-fluid" alt=""></a>
+                                <a href="#" class="title-h">Maximizing Efficiency with Proper Technology Implementation – Coffee Success Story</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more</a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                           <div class="blog-card">
+                            <div class="card-content">
+                                <a href="#"><img src="https://ityug247.com/wp-content/uploads/2024/04/security-features-for-mobile-phones.webp" class="img-fluid" alt=""></a>
+                                <a href="#" class="title-h">Strategic Move to an AI-supported application for Public Safety Travel App in London</a>
+                                <p>We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                            </div>
+                           <div class="learn-more">
+                            <a href="#">Learn more</a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!-- Section 4 =========== END -->
+             <section style="margin-top:50px;"></section>
+        </main>
+        <!-- Main layout Sections ====================== END -->
+
+
+        <!-- Footer  ================================= START -->
+        <footer></footer>
+        <!-- Footer =================================== END -->
+
+
+        <!-- Scroll to Top Button ==================== START -->
+        <button title="back to top button" id="scroll_to_top">
+            <svg width="16" fill="#fff" viewBox="0 -4.5 20 20" xmlns="http://www.w3.org/2000/svg">
+                <g stroke-width="0" />
+                <g stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M19.708 10.634c.39-.405.39-1.06 0-1.464L11.444.607a1.95 1.95 0 0 0-2.827 0L.292 9.232c-.385.4-.39 1.048-.01 1.454a.976.976 0 0 0 1.425.01l7.617-7.893a.975.975 0 0 1 1.414 0l7.557 7.83a.974.974 0 0 0 1.413 0"
+                    fill-rule="evenodd"
+                />
+            </svg>
+        </button>
+        <!-- Scroll to Top Button ====================== END -->
+
+        
+        <!-- Scripts Links =========================== START -->
+        <script src="assets/js/script.js"></script>
+
+        <script>
+        function createCounter(id, maxCount) {
+            let count = 0;
+            let interval = setInterval(() => {
+                let countElement = document.getElementById(id);
+                if (!countElement) {
+                    console.error("Counter element with ID '" + id + "' not found.");
+                    clearInterval(interval);
+                    return;
+                }
+                countElement.innerHTML = ++count;
+                if (count === maxCount) {
+                    clearInterval(interval);
+                }
+            }, 10);
+        }
+
+        // Create and start multiple counters
+        createCounter("counter1", 90);
+        createCounter("counter2", 120);
+        createCounter("counter3", 60);
+        createCounter("counter4", 3);
+        </script>
+
+    </body>
+</html>
