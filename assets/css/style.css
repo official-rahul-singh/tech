@@ -405,6 +405,7 @@ h1,
     padding-top: 50px;
     margin-top: 50px;
     background: url("../img/footer-bg.png") no-repeat;
+    background-size: cover;
   }
 
   footer>.container{
