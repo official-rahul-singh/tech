@@ -70,6 +70,10 @@
     align-items: center;
   }
 
+  .align-center{
+    align-items: center;
+  }
+
   .flex-between {
     justify-content: space-between;
     }
@@ -133,8 +137,6 @@
     width: fit-content;
   }
   
- 
-  
   /* Sep button _____________Start*/
   
   
@@ -187,6 +189,10 @@
   
   /* # Header [mobile size]
   =================================================*/
+.site-logo{
+  width: 200px;
+}
+
   header{
     height: 70px;
     display: flex;
@@ -309,7 +315,11 @@ header .search-input {
   =================================================*/
  /* section 1 start */
  .hero-header{
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(133deg, rgba(255, 255, 255) 8%, rgb(255 230 231 / 67%) 28%, rgba(234, 242, 254, .7) 36%);
+  padding-block: 50px 60px;
  }
 
  .hero-header .col-lg-5{
@@ -317,14 +327,16 @@ header .search-input {
  }
  .hero-content{
   display: grid;
-  gap:20px;
+  gap: 20px;
+  position: absolute;
+  width: 45%;
  }
 
  .hero-img{
-  position: absolute;
-  width: 130%;
+  width: 50%;
   right: 0;
   height: 100%;
+  margin-left: auto;
   }
 
   .dual-button{
@@ -341,7 +353,6 @@ header .search-input {
 
  .why-to-choose{
   grid-template-columns: repeat(5, 1fr);
-  align-items: center;
  }
 
  .counter-box .flex, .review .flex{
@@ -356,18 +367,18 @@ header .search-input {
  .call-to{
   padding: 30px;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 16px;
 }
  /* call to action */
 
  /* section 3 start */
  .card-content{
   display: grid;
-  gap:6px;
+  gap:12px;
+  flex: 1;
  }
 
- .card-content img {
-  margin-bottom: 10px;
-}
  /* section 3 end */
 
  /* section 4 start */
@@ -375,11 +386,9 @@ header .search-input {
   padding-block: 50px;
  }
 
- .card-box {
-  border-radius: var(--radius);
- }
   .learn-more{
   font-size: var(--fs-3);
+  margin-top: auto;
  }
  .card-box .learn-more{
   padding: 20px 30px;  
@@ -392,17 +401,99 @@ header .search-input {
  }
  /* section 4 end */
 
+ /* < Section 7 =========== START */
+ .companies-sec{
+  align-items: center;
+ }
+ .companies-sec .sep{
+  margin-bottom: 10px;
+ }
+ /* < Section 7 =========== END */
+
  /* blog-card start */
  .blog-card{
   padding: 20px 20px 30px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  gap:12px;
  }
 
   .blog-card img{
     border-radius: var(--radius);
   }
  /* blog-card end */
+
+ /* testimonial slider start====*/
+    .slider{
+      position: relative;
+      overflow: hidden;
+    }
+    .slide-card, .slider-wrap {
+      display: flex;
+      position: relative;
+      width: 100%;
+    }
+    .slider-wrap {
+      box-sizing: content-box;
+      height: 100%;
+      transition: transform .5s ease;
+    }
+
+    .slide-card {
+      align-items: center;
+      flex-shrink: 0;
+      justify-content: center;
+    }
+    
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .testimonial .square-author {
+      display: flex;
+      justify-content: center;
+      text-align: start
+    }
+
+    .square-author {
+      align-items: center;
+      display: flex;
+      gap: 15px;
+    }
+    .square-author p{
+      margin-bottom: 0;
+    }
+
+    .square-author img {
+      height: 50px;
+      object-fit: cover;
+      width: 50px;
+    }
+
+    .slider-name-second {
+      margin-top: 30px;
+    }
+    
+    .button-container {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 30px;
+  }
+  .button-container button {
+    border: unset;
+    cursor: pointer;
+    display: grid;
+    height: 35px;
+    place-items: center;
+    width: 35px;
+  }
+ /* testimonial slider end===*/
  
   /* # Single Page
   =================================================*/
@@ -477,12 +568,22 @@ header .search-input {
 		max-width: 720px;
 	}
 
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
 }
 
 @media (min-width: 992px) {
 	.container {
 		max-width: 960px;
 	}
+
+  .col-lg-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
 
   .col-lg-3 {
     flex: 0 0 auto;
@@ -498,11 +599,17 @@ header .search-input {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
+  
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
 
   .col-lg-7 {
     flex: 0 0 auto;
     width: 58.33333333%;
   }
+  
 
 }
 
