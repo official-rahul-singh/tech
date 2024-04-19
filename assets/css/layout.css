@@ -315,7 +315,6 @@ header .search-input {
   =================================================*/
  /* section 1 start */
  .hero-header{
-  /* margin-top: 50px; */
   display: flex;
   align-items: center;
   background: linear-gradient(133deg, rgba(255, 255, 255) 8%, rgb(255 230 231 / 67%) 28%, rgba(234, 242, 254, .7) 36%);
@@ -339,9 +338,6 @@ header .search-input {
   margin-left: auto;
   }
 
-  .dual-button{
-
-  }
  /* section 1 end */
 
  /* section 2 start */
@@ -351,8 +347,12 @@ header .search-input {
   row-gap: 10px;
  }
 
- .why-to-choose{
-  grid-template-columns: repeat(5, 1fr);
+ .sec-2{
+  grid-template-columns: 20% auto;
+ }
+
+ .sec-2 > .grid{
+  grid-template-columns: repeat(5, auto);
  }
 
  .counter-box .flex, .review .flex{
@@ -555,6 +555,11 @@ header .search-input {
   
   /* # Responsive Code
   =================================================*/
+
+  .col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
  
 /* responsive */
 @media (min-width: 576px) {

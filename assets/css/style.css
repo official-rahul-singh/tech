@@ -260,7 +260,7 @@ h1,
   /* seaction 1 end */
 
   /* section 2 start */
-  .why-to-choose{
+  .sec-2{
     padding-top: 30px;
     border-top: 1px solid var(--border);
   }
@@ -419,8 +419,9 @@ h1,
   }
   .copyright{
     padding: 20px 0px 20px 0px;
-    border-top: 1px solid var(--border);
-    color: var(--white);  
+    border-top: 1px solid #f3f3f338;
+    color: var(--border);  
+    text-align: center;
   }
   /* .disclaimer strong{
     color: var(--white);
@@ -585,11 +586,30 @@ header ul .dropdown ul{
 
 }
 @media screen and (max-width:992px) {
+  .sec-2{
+    grid-template-columns:auto;
+   }
+
+   .sec-2 > .grid{
+    grid-template-columns: repeat(2, auto);
+   }
+
+   .hero-content{
+    position: relative;
+    width: 100%;
+   }
+
+   .hero-img{
+    display: none;
+   }
 
 }
 @media screen and (max-width:600px) {
     .right-header :is(.contact-us, .btn){
         display: none;
+    }
+    .right-header .btn-fill{
+      display: none;
     }
 }
 
